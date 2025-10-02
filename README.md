@@ -1,9 +1,9 @@
 # 🏦 Sistema Bancário V3
 
 
-Este projeto é um desafio disponibilizado pela plataforma **[DIO](https://www.dio.me/)** e faz parte do bootcamp **Vivo - Python AI Backend Developer**.
+> Este projeto é um desafio disponibilizado pela plataforma **[DIO](https://www.dio.me/)** e faz parte do bootcamp **Vivo - Python AI Backend Developer**.
 
-> O objetivo desse projeto foi **remodelar** o [Sistema Bancário V2](https://github.com/KbeloN/Sistema-bancarioV2) para seguir os **paradigimas de Programação Orientada a Objetos (POO)** em Python.
+O objetivo desse projeto foi **remodelar** o [Sistema Bancário V2](https://github.com/KbeloN/Sistema-bancarioV2) para seguir os **paradigimas de Programação Orientada a Objetos (POO)** em Python.
 
 ## ✨ Evoluções e Principais Diferênças (V2 para V3)
 

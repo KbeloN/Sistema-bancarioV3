@@ -2,7 +2,6 @@ from entities.Cliente import Fisica
 from entities.conta import Conta
 from entities.transacao import Deposito 
 from entities.transacao import Saque
-from entities.historico import Historico
 import re
 
 # Funções utilitarias
@@ -41,7 +40,6 @@ def menu_inicial():
 
     [nu] - Novo usuário
     [eu] - Entrar no usuário
-    [lu] - listar clientes
     [q] - Sair do programa
 
 {''.center(30, '=')}''')
@@ -69,15 +67,6 @@ def novo_usuario(clientes):
         print(''.center(30,'='))
     else:
         print('\nCPF informado é inválido.')
-
-def listar_usuarios(clientes):
-    print()
-    print(' Usuários '.center(30,'='))
-    print()
-    if not clientes:
-        print('Não há usuários logados no sistema.')
-    for indice,cliente in enumerate(clientes):
-        print(f'{indice} - Nome: {cliente.nome}, CPF: {cliente.cpf}, Data de Nascimento: {cliente.data_nasc}, Endereço: {cliente.endereco}')
 
 # Funções do menu do usuário
 
@@ -249,8 +238,6 @@ def main():
 
 
     # Listar usuários
-            case 'lu':
-                listar_usuarios(clientes)
             case 'q':
                 break
             case _:

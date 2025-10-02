@@ -1,5 +1,6 @@
 from .transacao import Transacao
 from abc import ABC
+
 class Cliente(ABC):
     def __init__(self, endereco):
         self._endereco = endereco

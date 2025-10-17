@@ -1,6 +1,7 @@
+from abc import ABC
 from .historico import Historico
 
-class Conta:
+class Conta(ABC):
 
     def __init__(self,numero,cliente):
         self._saldo = 0.0
@@ -22,6 +23,10 @@ class Conta:
         return self._agencia
     
     @property
+    def cliente(self):
+        return self._cliente
+
+    @property
     def historico(self):
         return self._historico
     
@@ -30,15 +35,26 @@ class Conta:
         return cls(numero,cliente)
     
     def sacar(self,valor):
-        if valor > self._saldo:
-            return False
-        else:
+        if valor > self.saldo:
+            print('\n@@@ Saldo Insuficiente Para Continuar a Operação. @@@')
+
+        elif valor > 0:
             self._saldo -= valor
+            print('\n=== Saque Feito Com Sucesso! ===')
             return True
+        
+        else:
+            print('@@@ Operação Falhou. O Valor Inserido é Inválido @@@')
+            
+        return False
 
     def despositar(self,valor):
         if valor <= 0:
-            return False
+            print('\n@@@ Valor Inserido é Menor Que o Mínimo Esperado. @@@')
+
         else:
             self._saldo += valor
+            print('\n=== Deposito Feito Com Sucesso! ===')
             return True
+
+        return False

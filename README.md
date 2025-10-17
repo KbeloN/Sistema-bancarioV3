@@ -11,7 +11,7 @@ O objetivo desse projeto foi **remodelar** o [Sistema Bancário V2](https://gith
  - **Modularizado:** As funcionalidades foram estruturadas em **métodos**, o que melhora a manutenibilidade do código e promove o **reúso**.
  - **Encapsulamento:** Os atributos foram encapsulados para garantir a segurança e **integridade** dos dados bancários.
  - **Herança e Polimorfismo:** 
-    - **Herança:** Foi aplicada na classe `Fisica` (Herdada de `Cliente`), `Deposito` e `Saque` (Ambas de `Transacao`).
+    - **Herança:** Foi aplicada na classe `Fisica` (Herdada de `Cliente`), `Deposito` e `Saque` (Ambas de `Transacao`) e `Conta_Corrente` (Da classe `Conta`).
     - **Polimorfismo:** Usado no método **construtor** (`__init__`) da classe `Fisica` e no **registro de transações** em `Transacoes`.
 
 ## 📌 Funcionalidades
@@ -19,11 +19,9 @@ O objetivo desse projeto foi **remodelar** o [Sistema Bancário V2](https://gith
 - **Menu Inicial**
     * Criar novo usuário
     * Entrar no usuário
-    * ~~Listar usuários no sistema~~ (Removida por não ser necessária no contexto do sistema)
     * Sair do sistema
 - **Menu do Usuário**
-    * Depositar
-    * Sacar
+    * Operações (Depósito e Saque)
     * Exibir Histórico (De cada conta individual)
     * Criar nova conta
     * Listar contas

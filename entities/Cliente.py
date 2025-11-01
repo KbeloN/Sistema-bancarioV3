@@ -1,4 +1,4 @@
-from .transacao import Transacao
+from .transacao import Transacao,Saque
 from abc import ABC
 
 class Cliente(ABC):
@@ -34,6 +34,7 @@ class Cliente(ABC):
     def selecionar_conta(self):
         if not self._contas:
             print('\nVocê não tem contas vinculadas a esse usuário.')
+            return
 
         else:
             print('\nQual Conta Deseja Selecionar? (Digite o número da conta)')
